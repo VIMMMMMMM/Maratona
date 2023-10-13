@@ -1,10 +1,8 @@
 public class Garfo {
 
-    private int id;
     private boolean livre;
 
     public Garfo(int id) {
-        this.id = id;
         this.livre = true;
     }
 

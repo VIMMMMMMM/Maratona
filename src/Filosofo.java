@@ -1,9 +1,6 @@
 public class Filosofo extends Thread {
 
     private final String nome;
-    private final int id;
-    private int porcoes;
-    private final Mesa mesa;
     private final Garfo esquerdo;
     private final Garfo direito;
 
@@ -14,11 +11,8 @@ public class Filosofo extends Thread {
 
     public Filosofo(String nome, int id, Mesa mesa) {
         this.nome = nome;
-        this.id = id;
-        this.porcoes = 0;
-        this.mesa = mesa;
         this.esquerdo = mesa.getGarfo(id);
-        this.direito = mesa.getGarfo((id + 1) % 5);
+        this.direito = mesa.getGarfo((id) % 5);
     }
 
     public void run() {
@@ -43,7 +37,6 @@ public class Filosofo extends Thread {
     public void comer() {
         try {
             System.out.println(nome + " está comendo...");
-            porcoes++;
             Thread.sleep((long) (Math.random() * 10000));
             vezesQueComeu++;
         } catch (InterruptedException e) {

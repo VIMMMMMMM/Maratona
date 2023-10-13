@@ -1,6 +1,6 @@
 public class Mesa {
 
-    private Garfo[] garfos;
+    private final Garfo[] garfos;
 
     public Mesa() {
         garfos = new Garfo[5];

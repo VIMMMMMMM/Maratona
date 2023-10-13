@@ -15,14 +15,13 @@ public class Main {
             executorService.execute(filosofos[i]);
         }
 
-        Thread.sleep(50000);
+        Thread.sleep(40000);
         Filosofo.executando = false;
 
         executorService.shutdownNow();
         for (Filosofo filosofo : filosofos) {
-            System.out.println(filosofo.getNome() + " comeu " + filosofo.getVezesQueComeu() + " vezes e pensou " + filosofo.getVezesQuePensou() + " vezes.");
-        }
-        exit(0);
+            System.out.println("--------------------------------------------------\n "+filosofo.getNome() + " comeu " + filosofo.getVezesQueComeu() + " vezes e pensou " + filosofo.getVezesQuePensou() + " vezes.");        }
 
+        exit(0);
     }
 }
