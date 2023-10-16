@@ -20,7 +20,10 @@ public class Main {
 
         executorService.shutdownNow();
         for (Filosofo filosofo : filosofos) {
-            System.out.println("--------------------------------------------------\n "+filosofo.getNome() + " comeu " + filosofo.getVezesQueComeu() + " vezes e pensou " + filosofo.getVezesQuePensou() + " vezes.");        }
+            System.out.println("--------------------------------------------------\n "+filosofo.getNome()
+                    + " comeu " + filosofo.getVezesQueComeu()
+                    + " vezes e pensou " + filosofo.getVezesQuePensou() + " vezes.");        
+        }
 
         exit(0);
     }
